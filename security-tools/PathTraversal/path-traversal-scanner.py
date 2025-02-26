@@ -11,7 +11,7 @@ user_agents = [
     "Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/537.36 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/537.36"
 ]
 
-#Function to read payloads from a text file
+# Function to read payloads from a text file
 def load_payloads(file_path):
     if not os.path.exists(file_path):
         print(f"[!] File {file_path} not found!")
