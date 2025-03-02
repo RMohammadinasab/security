@@ -16,8 +16,7 @@ pip install nmap
 
 
 
-#### **5. نحوه استفاده (Usage)**
-توضیح دهید که چگونه ابزار را اجرا کنیم:
+
 ```md
 ## Usage
 1. Create a text file `ips.txt` containing subnets (e.g., `192.168.1.0/24`).
@@ -26,9 +25,6 @@ pip install nmap
 python scan.py
 ```
 
-
-#### **6. نمونه خروجی (Example Output)**
-یک نمونه از خروجی اسکن:
 ```md
 ## Example Output
 ```bash
