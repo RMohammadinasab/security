@@ -9,7 +9,9 @@ This tool scans a given IP range or subnet to identify live hosts and open ports
 
 
 ## Installation
+
 Ensure you have Python installed. Then, install the required dependencies using:
+
 ```bash
 pip install nmap
 ```
@@ -17,16 +19,18 @@ pip install nmap
 
 
 
-```md
 ## Usage
+
 1. Create a text file `ips.txt` containing subnets (e.g., `192.168.1.0/24`).
 2. Run the script:
+
 ```bash
 python scan.py
 ```
 
-```md
+
 ## Example Output
+
 ```bash
 Scanning 192.168.1.1 ...
 Scanning 192.168.1.2 ...
