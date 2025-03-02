@@ -57,5 +57,5 @@ This project is licensed under the MIT License.
 
 ## Contact
 For questions or feedback, reach out via:
-- Email: your-email@example.com
+- Email: rm.nasab@gmail.com
 - LinkedIn: [Razieh Mohammadinasab](https://www.linkedin.com/in/razieh-mohammadinasab-32b57238/)
