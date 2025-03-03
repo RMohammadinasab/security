@@ -1,32 +1,79 @@
 # Network Scanner Tool
-This tool scans a given IP range or subnet to identify live hosts and open ports. It provides information about running services on detected open ports.
+
+## Overview
+This tool is an Network Scanner Tool based on Nmap that allows users to detect live hosts, open ports, and running services. The scanner provides flexibility in input methods, supports evasion techniques to bypass WAF detection, and logs the scan results.
 
 ## Features
-- Scans a given subnet and detects live hosts.
-- Identifies open ports and the running services.
-- Supports scanning popular ports (SSH, HTTP, HTTPS, databases, Redis, Grafana, etc.).
-- Outputs results in a readable format.
-
+- **Three input methods:**
+  - Single IP address scan
+  - Subnet scan (e.g., `192.168.1.0/24`)
+  - Multiple IPs/Subnets from a file (`ips.txt`)
+- **Full port scan (`-p0-`)**
+- **Advanced scanning options (`-A` for OS detection, service detection, and script scanning)**
+- **High-speed scan optimization (`-T4`)**
+- **Evasion techniques:**
+  - Randomized host selection (`--randomize-hosts`)
+  - Data length obfuscation (`--data-length 50`)
+  - MAC address spoofing (`--spoof-mac 0`)
+- **Logs all scan results into `scan_results.log`**
 
 ## Installation
+### Prerequisites
+Ensure you have Nmap installed on your system. If Nmap is not installed, use the following command:
 
-Ensure you have Python installed. Then, install the required dependencies using:
-
+#### Linux:
 ```bash
-pip install nmap
+sudo apt install nmap
 ```
 
+#### macOS:
+```bash
+brew install nmap
+```
 
+#### Windows:
+Download and install Nmap from [nmap.org](https://nmap.org/download.html).
 
+You also need the `python-nmap` library:
+```bash
+pip install python-nmap
+```
 
 ## Usage
-
-1. Create a text file `ips.txt` containing subnets (e.g., `192.168.1.0/24`).
-2. Run the script:
-
+Run the script with:
 ```bash
-python scan.py
+python port-scaneer.py
 ```
+Then, select the input method:
+```
+Select input method:
+1 - Enter a single IP address
+2 - Enter a subnet (e.g., 192.168.1.0/24)
+3 - Read from a file (ips.txt)
+```
+
+### Example Scans
+#### 1️⃣ Single IP Address:
+```
+Enter the IP address: 192.168.1.10
+```
+#### 2️⃣ Subnet Scan:
+```
+Enter the subnet (e.g., 192.168.1.0/24): 192.168.1.0/24
+```
+#### 3️⃣ Multiple IPs/Subnets from a File:
+Ensure `ips.txt` contains:
+```
+192.168.1.10
+192.168.1.0/24
+```
+The script will automatically extract and scan all IPs.
+
+## Output
+Results will be displayed in the console and saved to `scan_results.log` with details of live hosts, open ports, and running services.
+
+## License
+This tool is provided under the MIT License. Use it responsibly!
 
 
 ## Example Output
@@ -51,8 +98,6 @@ Live Hosts:
 - Internet connection (for external scans)
 
 
-## License
-This project is licensed under the MIT License.
 
 
 ## Contact
