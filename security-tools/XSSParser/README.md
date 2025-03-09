@@ -3,6 +3,7 @@
 XSSParser is a penetration testing tool designed to detect Cross-Site Scripting (XSS) vulnerabilities in websites. It automatically tests a list of payloads on a given parameter and analyzes the server's response.
 
 ⚙️ Features
+
 ✅ Supports GET and POST methods
 
 ✅ Reads payloads from a text file
