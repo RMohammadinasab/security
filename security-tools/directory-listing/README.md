@@ -28,24 +28,24 @@ Then, choose a method to find images:
 ```bash
 Select a method to find images:
 
-1️⃣ Directory Listing: Checks if the website allows listing all files in the upload folder.
-2️⃣ WordPress API: Uses the built-in API to list uploaded media files.
-3️⃣ Brute Force: Tries to guess image filenames by checking common patterns.
-4️⃣ Run all methods
+1️: Directory Listing: Checks if the website allows listing all files in the upload folder.
+2️: WordPress API: Uses the built-in API to list uploaded media files.
+3️: Brute Force: Tries to guess image filenames by checking common patterns.
+4️: Run all methods
 ```
 
 Enter the desired option (1, 2, 3, or 4) and the tool will attempt to retrieve images.
 
 📖 How It Works
-1️⃣ Directory Listing
+1️: Directory Listing
 Some WordPress sites allow directory listing, which exposes all files in /wp-content/uploads/.
 This tool checks for this vulnerability and extracts image URLs.
 
-2️⃣ WordPress API
+2️: WordPress API
 WordPress provides an API endpoint (/wp-json/wp/v2/media) that lists uploaded media files.
 If enabled, this method retrieves all stored images from the API.
 
-3️⃣ Brute Force
+3️: Brute Force
 If directory listing and API access are blocked, brute force is used.
 The script tries common filenames like image1.jpg, image2.png, etc., and checks if they exist.
 
@@ -61,5 +61,5 @@ Use it only on websites you own or have permission to test. Unauthorized access 
 https://example.com/wp-content/uploads/2022/01/image1.jpg
 https://example.com/wp-content/uploads/2022/01/image2.png
 
-🎯 Total 2 images found!
+ Total 2 images found!
 ```

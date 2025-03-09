@@ -51,10 +51,10 @@ def main():
 
     # Explain each method to the user
     print("\nSelect a method to find images:\n")
-    print("1️⃣ Directory Listing: Checks if the website allows listing all files in the upload folder.")
-    print("2️⃣ WordPress API: Uses the built-in API to list uploaded media files.")
-    print("3️⃣ Brute Force: Tries to guess image filenames by checking common patterns.")
-    print("4️⃣ Run all methods")
+    print("1️1 Directory Listing: Checks if the website allows listing all files in the upload folder.")
+    print("2️ WordPress API: Uses the built-in API to list uploaded media files.")
+    print("3️ Brute Force: Tries to guess image filenames by checking common patterns.")
+    print("4️ Run all methods")
 
     # Get user's choice
     choice = input("\nEnter your choice (1/2/3/4): ").strip()
@@ -72,14 +72,14 @@ def main():
         found_images += check_wordpress_api(site_url)
         found_images += brute_force_images(upload_url)
     else:
-        print("\n❌ Invalid choice. Please enter 1, 2, 3, or 4.")
+        print("\n Invalid choice. Please enter 1, 2, 3, or 4.")
         return
 
     # Display results
     if not found_images:
-        print("\n❌ No images found using the selected method(s).")
+        print("\n No images found using the selected method(s).")
     else:
-        print(f"\n🎯 Total {len(found_images)} images found!")
+        print(f"\n Total {len(found_images)} images found!")
 
 if __name__ == "__main__":
     main()
