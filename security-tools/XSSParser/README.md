@@ -4,11 +4,17 @@ XSSParser is a penetration testing tool designed to detect Cross-Site Scripting 
 
 ⚙️ Features
 ✅ Supports GET and POST methods
+
 ✅ Reads payloads from a text file
+
 ✅ Timeout feature to prevent request hangs
+
 ✅ Saves results in a log file (xss_log.txt)
+
 ✅ Displays Response Code and Headers
+
 ✅ Detects Reflected XSS by analyzing server responses
+
 
 
 🚀 Installation & Usage
