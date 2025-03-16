@@ -94,8 +94,8 @@ def test_path_traversal(target_url, param, method, payload_file, log_file):
                 print(f"  {key}: {value}")
 
             # Print response body preview
-            #print("\n[+] Response Body (First 500 chars):")
-            #print(response.text[:500])  
+            print("\n[+] Response Body (First 500 chars):")
+            print(response.text[:500])  
 
             # Log result
             msg = f"[+] Payload: {payload} | User-Agent: {random_user_agent} | Status Code: {response.status_code}"
@@ -113,7 +113,7 @@ if __name__ == "__main__":
     server_os = detect_server_os(target)
 
     # Suggesting proper payload file based on OS
-    if server_os == "Windows":
+    if server_os == "Window s":
         payload_file = input("Enter the Windows payload file (default: windows_payloads.txt): ").strip() or "windows_payloads.txt"
     else:
         payload_file = input("Enter the Linux payload file (default: linux_payloads.txt): ").strip() or "linux_payloads.txt"

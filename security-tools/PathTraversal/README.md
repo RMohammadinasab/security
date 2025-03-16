@@ -54,6 +54,6 @@ Enter parameter name: file
 
 ⚠️ Legal Disclaimer
 
-❌ This tool is intended for educational and authorized penetration testing only.
+This tool is intended for educational and authorized penetration testing only.
 
-❌ The user is responsible for any misuse of this tool!
+The user is responsible for any misuse of this tool!

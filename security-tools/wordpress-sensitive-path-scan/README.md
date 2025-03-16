@@ -1,0 +1,66 @@
+# Sensitive paths Scan Tool
+
+## Introduction
+This tool is designed to test the security of a web application by sending HTTP requests to various sensitive paths using different methods and user agents. It logs the responses to help identify potential security risks.
+
+## Features
+- Supports multiple HTTP methods: `GET`, `HEAD`, `OPTIONS`, `TRACE`, `PUT`, and `DELETE`
+- Uses various User-Agent headers to bypass Web Application Firewalls (WAFs)
+- Reads sensitive paths from a text file and tests access to them
+- Logs all requests and responses in a timestamped log file
+- Handles request exceptions and logs errors
+
+## Installation
+### Prerequisites
+Ensure you have Python installed (preferably Python 3.6 or later).
+
+### Install Required Dependencies
+```sh
+pip install requests
+```
+
+## Usage
+### Running the Script
+Execute the script using the following command:
+```sh
+python script.py
+```
+
+### Input Parameters
+1. The script prompts for the target domain (e.g., `https://example.com`).
+2. It also asks for the path to a text file containing sensitive paths to test.
+
+### Example of a Sensitive Paths File
+Create a file named `paths.txt` with the following content:
+```
+admin
+login
+config.php
+wp-admin
+robots.txt
+```
+
+### Example Run
+```sh
+Enter the target domain (e.g., https://example.com): https://target-site.com
+Enter the path to the text file containing sensitive paths: paths.txt
+```
+
+## Output
+- The script generates a log file in the current directory named with the timestamp (e.g., `scan_log_2025-03-16_14-30-00.txt`).
+- Each log entry contains the HTTP method, URL, response status, response message, and the User-Agent used.
+
+## Example Log Output
+```
+14:30:00 | GET https://target-site.com/admin | 403 Forbidden | Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/98.0.4758.102 Safari/537.36
+14:30:02 | HEAD https://target-site.com/login | 200 OK | Googlebot/2.1 (+http://www.google.com/bot.html)
+ERROR: TRACE https://target-site.com/config.php | Connection timed out
+```
+
+## Notes
+- Ensure you have permission to scan the target website.
+- Scanning without authorization may be illegal and against terms of service.
+
+## License
+This project is for educational and ethical security testing purposes only. Unauthorized use is prohibited.
+
