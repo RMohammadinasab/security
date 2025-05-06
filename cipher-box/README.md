@@ -9,16 +9,11 @@ This repository provides a collection of cryptographic algorithms, each implemen
 - **Transposition Cipher**
 - **Vernam Cipher**
 - **Multiplicative Inverse Cipher**
-- **DES (Data Encryption Standard)**
-- **AES (Advanced Encryption Standard)**
-- **ECB (Electronic Codebook Mode)**
-- **CBC (Cipher Block Chaining Mode)**
-- **CFB (Cipher Feedback Mode)**
-- **OFB (Output Feedback Mode)**
+- **DES**
+- **AES (Multiple Modes)**
 - **Salsa20**
 - **ChaCha20**
 - **Vigenère Cipher**
-- **Steganography Techniques**
 
 ## Repository Structure
 Each algorithm is maintained as a separate project to allow users to easily integrate and use specific encryption or decryption techniques as needed. Each tool includes:
@@ -32,12 +27,14 @@ To use any of the cryptographic tools, navigate to the respective algorithm’s 
 ## Contribution
 Contributions are welcome. If you would like to enhance an existing tool or add a new cryptographic method, please submit a pull request with clear documentation and examples.
 
+## License
+
+This project is released under the MIT License.
 
 ## Developer
-**Razieh Mohammadinasab**
+Razieh Mohammadinasab
 
 
 ## Contact
 For questions or feedback, reach out via:
 - Email: rm.nasab@gmail.com
-- LinkedIn: [Razieh Mohammadinasab](https://www.linkedin.com/in/razieh-mohammadinasab-32b57238/)
